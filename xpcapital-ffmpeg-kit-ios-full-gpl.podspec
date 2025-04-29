@@ -1,12 +1,15 @@
 Pod::Spec.new do |s|
-  s.name         = "ffmpeg-kit-ios-full-gpl"
-  s.version      = "6.0"
+  s.name         = "xpcapital-ffmpeg-kit-ios-full-gpl"
+  s.version      = "6.0.2"
   s.summary      = "FFmpeg Kit iOS Full GPL Shared Framework"
   s.description  = "Includes FFmpeg with dav1d, fontconfig, freetype, fribidi..."
   s.homepage     = "https://github.com/xpcapital/ffmpeg-kit"
   s.license      = {
     :type => "LGPL-3.0",
     :file => "LICENSE"
+  }
+  s.authors      = {
+    "Liroo" => "liroo.pier@gmail.com"
   }
 
   s.platform     = :ios, "12.1"
@@ -19,14 +22,5 @@ Pod::Spec.new do |s|
 
   s.ios.frameworks = ["AudioToolbox", "AVFoundation", "CoreMedia", "VideoToolbox"]
 
-  s.ios.vendored_frameworks = [
-    "**/ffmpegkit.xcframework",
-    "**/libavcodec.xcframework",
-    "**/libavdevice.xcframework",
-    "**/libavfilter.xcframework",
-    "**/libavformat.xcframework",
-    "**/libavutil.xcframework",
-    "**/libswresample.xcframework",
-    "**/libswscale.xcframework"
-  ]
+  s.ios.vendored_frameworks = 'Frameworks/*.xcframework'
 end

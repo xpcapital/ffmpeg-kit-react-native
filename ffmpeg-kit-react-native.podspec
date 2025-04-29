@@ -14,16 +14,16 @@ Pod::Spec.new do |s|
   s.requires_arc      = true
   s.static_framework  = true
 
-  s.source       = { :git => "https://github.com/xpcapital/ffmpeg-kit-react-native.git", :tag => "react.native.v#{s.version}" }
+  s.source       = { :git => "https://github.com/xpcapital/ffmpeg-kit-react-native.git", :tag => "v#{s.version}" }
   
   s.dependency "React-Core"
 
-  s.subspec "full" do |ss|
+  s.subspec "full-gpl" do |ss|
     ss.source_files = [
       "**/FFmpegKitReactNativeModule.m",
       "**/FFmpegKitReactNativeModule.h"
     ]
-    ss.dependency "ffmpeg-kit-ios-full-gpl", "6.0"
+    ss.dependency "xpcapital-ffmpeg-kit-ios-full-gpl", "6.0.2"
 
     ss.ios.deployment_target = "12.1"
   end
